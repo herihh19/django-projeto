@@ -1,0 +1,16 @@
+{% extends 'usuarios/base.html' %}
+{%block conteudo %}
+    <form action ="{% url 'listagem_usuarios'%}"method = "post">
+      {% csrf_token %}
+      <div style = "text-align: center"class="container">
+        <h1>Cadastrar usuário</h1>
+        Nome <input name = "nome"class= "form-control-sm"type="text" >       
+        Idade <input name = "idade"class="form-control-sm"type="text"> <!-- informações usuário-->
+        <button type="button" class="btn btn-primary">Enviar</button>  <!--botão-->
+      </div>
+    </form>
+{% endblock %}
+    
+    
+<label for="exampleColorInput" class="form-label">Color picker</label>
+<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">    
